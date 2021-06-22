@@ -60,7 +60,40 @@ describe('app routes', () => {
         'owner_id': 1, 
       };
 
-      expect(dataOwls.body).not.toContainEqual(newOwl);
+      expect(dataOwls.body).toContainEqual(newOwl);
     });
   });
+
+//   test('/DELETE Creates single owl', async() => {
+    
+//     const data = await fakeRequest(app)
+//       .post('/owls')
+//       .send({
+//         name: 'new owl',
+//         note: 'some note',
+//         endangered: true,
+//         habitat: 'forest',
+//         price: 1000
+//       })
+//       .expect('Content-Type', /json/)
+//       .expect(200);
+  
+//     const dataOwls = await fakeRequest(app)
+//       .get('/owls')
+//       .expect('Content-Type', /json/)
+//       .expect(200);
+  
+//     const newOwl = {
+//       'id': 6, 
+//       'name': 'new owl', 
+//       'note': 'some note', 
+//       'endangered': true, 
+//       'habitat': 'forest',
+//       'price': '1000',
+//       'owner_id': 1, 
+//     };
+
+//     expect(dataOwls.body).not.toContainEqual(newOwl);
+//   });
+// });
 });  
