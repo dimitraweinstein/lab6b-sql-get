@@ -23,7 +23,7 @@ async function run() {
                     note VARCHAR(512) NOT NULL,
                     endangered BOOLEAN NOT NULL,
                     habitat VARCHAR(512) NOT NULL,
-                    price DECIMAL NOT NULL,
+                    price NUMERIC NOT NULL,
                     owner_id INTEGER NOT NULL REFERENCES users(id)
             );
         `);

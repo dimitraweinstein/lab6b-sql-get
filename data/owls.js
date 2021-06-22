@@ -7,7 +7,7 @@ module.exports = [
     // threats: 'Habitat loss, vehicle collisions',
     endangered: false,
     habitat: 'Grasslands, deserts, and agricultural fields',
-    price: 600.00,
+    price: '600',
   }, {
     id: 2,
     name: 'Barred Owl',
@@ -16,7 +16,7 @@ module.exports = [
     // threats: 'Deforestation',
     endangered: false,
     habitat: 'Mixed, mature forests',
-    price: 400.00,
+    price: 400,
   }, {
     id: 3,
     name: 'Ferruginous Pygmy',
@@ -25,7 +25,7 @@ module.exports = [
     // threats: 'Habitat loss, land conversion, and urbanization',
     endangered: true,
     habitat: 'Tropical dry forests',
-    price: 1300.00,
+    price: 1300,
   }, {
     id: 4,
     name: 'Great Horned Owl',
@@ -34,7 +34,7 @@ module.exports = [
     // threats: 'Habitat loss, land conversion, and urbanization',
     endangered: true,
     habitat: 'Wide variety of habitat, including forests and fields',
-    price: 1500.00,
+    price: 1500,
   }, {
     id: 5,
     name: 'Northern Hawk Owl',
@@ -43,6 +43,6 @@ module.exports = [
     // threats: 'Habitat loss, land conversion, and urbanization',
     endangered: true,
     habitat: 'Boreal forests',
-    price: 2000.00,
+    price: 2000,
   }
 ];
