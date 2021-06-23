@@ -1,4 +1,4 @@
-module.exports = [
+const owls  = [
   {
     id: 1,
     name: 'Barn Owl',
@@ -45,4 +45,23 @@ module.exports = [
     habitat: 'Boreal forests',
     price: 2000,
   }
+];
+
+const endangeredData = [
+  {
+    endangered: false
+  }, {
+    endangered: false
+  }, {
+    endangered: true
+  }, {
+    endangered: true
+  }, {
+    endangered: true
+  }
+];
+
+module.exports = [
+  endangeredData,
+  owls
 ];
