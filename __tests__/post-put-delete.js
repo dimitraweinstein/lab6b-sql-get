@@ -59,16 +59,6 @@ const owls  = [
   }
 ];
 
-const rawEndangeredData = [
-  {
-    endangered: 'critical'
-  }, {
-    endangered: 'moderate'
-  }, {
-    endangered: 'none'
-  }
-];
-
 describe('post put and delete routes', () => {
   describe('routes', () => {
     let token;
@@ -151,7 +141,7 @@ describe('post put and delete routes', () => {
         .send({
           name: 'new owl',
           note: 'some note',
-          endangered: true,
+          endangered: '2',
           habitat: 'forest',
           price: 1000,
           endangered_id: 2
@@ -160,22 +150,21 @@ describe('post put and delete routes', () => {
         .expect('Content-Type', /json/)
         .expect(200);
     
-      const dataOwls = await fakeRequest(app)
-        .get('/owls')
-        .expect('Content-Type', /json/)
-        .expect(200);
+      // const dataOwls = await fakeRequest(app)
+      //   .get('/owls')
+      //   .expect('Content-Type', /json/);
+      //   .expect(200);
     
       const newOwl = {
         'id': 6,
         'name': 'new owl',
         'note': 'some note',
-        'endangered': true,
         'habitat': 'forest',
         'price': '1000',
         'owner_id': 1,
+        'endangered_id': 2,
       };
       expect(data.body).toEqual(newOwl);
-      expect(dataOwls.body).toContainEqual(newOwl);
     });
   });
 });
