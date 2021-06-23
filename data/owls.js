@@ -50,7 +50,7 @@ const owls  = [
 
 const rawEndangeredData = [
   {
-    endangered: 'criitcal'
+    endangered: 'critical'
   }, {
     endangered: 'moderate'
   }, {
