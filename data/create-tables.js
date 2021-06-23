@@ -17,6 +17,10 @@ async function run() {
                     email VARCHAR(256) NOT NULL,
                     hash VARCHAR(512) NOT NULL
                 );           
+                CREATE TABLE endangered (
+                  id SERIAL PRIMARY KEY,
+                  endangered BOOLEAN NOT NULL
+              ); 
                 CREATE TABLE owls (
                     id SERIAL PRIMARY KEY NOT NULL,
                     name VARCHAR(512) NOT NULL,
