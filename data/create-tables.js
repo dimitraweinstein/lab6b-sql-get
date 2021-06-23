@@ -19,13 +19,13 @@ async function run() {
                 );           
                 CREATE TABLE endangered (
                   id SERIAL PRIMARY KEY,
-                  endangered BOOLEAN NOT NULL
+                  endangered VARCHAR(512) NOT NULL
               ); 
                 CREATE TABLE owls (
                     id SERIAL PRIMARY KEY NOT NULL,
                     name VARCHAR(512) NOT NULL,
                     note VARCHAR(512) NOT NULL,
-                    endangered BOOLEAN NOT NULL,
+                    endangered_id INTEGER NOT NULL REFERENCES endangered(id),
                     habitat VARCHAR(512) NOT NULL,
                     price NUMERIC NOT NULL,
                     owner_id INTEGER NOT NULL REFERENCES users(id)
