@@ -166,5 +166,38 @@ describe('post put and delete routes', () => {
       };
       expect(data.body).toEqual(newOwl);
     });
+    test('/PUT Updates single owl', async () => {
+    
+      const data = await fakeRequest(app)
+        .put('/owls/4')
+        .send({
+          name: 'Great Horned Owl 3',
+          note: 'some note',
+          endangered: '2',
+          habitat: 'forest',
+          price: 1000,
+          endangered_id: 2
+        })
+      
+        .expect('Content-Type', /json/)
+        .expect(200);
+    
+      // const dataOwls = await fakeRequest(app)
+      //   .get('/owls')
+      //   .expect('Content-Type', /json/);
+      //   .expect(200);
+    
+      const newOwl = {
+        'id': 4,
+        'name': 'Great Horned Owl 3',
+        'note': 'some note',
+        'habitat': 'forest',
+        'price': '1000',
+        'owner_id': 1,
+        'endangered_id': 2,
+      };
+      expect(data.body).toEqual(newOwl);
+    });
   });
 });
+
